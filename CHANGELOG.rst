@@ -4,6 +4,14 @@ Release Notes
 
 .. current developments
 
+0.0.22
+=====
+
+**Added:**
+
+* 5ft-news
+
+
 0.0.19
 =====
 
