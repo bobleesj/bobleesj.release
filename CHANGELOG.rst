@@ -4,6 +4,14 @@ Release Notes
 
 .. current developments
 
+0.0.17
+=====
+
+**Added:**
+
+* 4th
+
+
 0.0.16
 =====
 
