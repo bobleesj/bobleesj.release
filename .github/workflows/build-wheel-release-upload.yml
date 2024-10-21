@@ -1,0 +1,15 @@
+name: Release (GitHub/PyPI)
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    uses: Billingegroup/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
+    with:
+      project: bobleesj.release
+    secrets:
+      PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
