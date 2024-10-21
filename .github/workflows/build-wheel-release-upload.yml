@@ -35,7 +35,6 @@ jobs:
           fi
 
   release:
-    # Skipped when check-release-privillege is skipped
     needs: [tag-check, check-release-privilege]
     if: needs.tag-check.outputs.tag_valid == 'true'
     permissions:
@@ -45,3 +44,4 @@ jobs:
       project: bobleesj/release
     secrets:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
