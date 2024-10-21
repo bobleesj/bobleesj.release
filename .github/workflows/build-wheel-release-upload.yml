@@ -35,8 +35,8 @@ jobs:
     if: needs.tag-check.outputs.tag_valid == 'true'
     permissions:
       contents: write
-    uses: Billingegroup/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
+    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
     with:
-      project: diffpy.snmf
+      project: bobleesj/release
     secrets:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
