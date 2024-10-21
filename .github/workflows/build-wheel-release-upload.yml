@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check user role
+        # FIXME: Replace sbillinge to bobleesj
         run: |
-          if [ "${{ github.actor }}" != "sbillinge" ]; then
+          if [ "${{ github.actor }}" != "bobleesj" ]; then
             echo "Error: Unauthorized user"
             exit 1
           fi
