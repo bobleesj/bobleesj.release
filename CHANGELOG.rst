@@ -4,6 +4,14 @@ Release Notes
 
 .. current developments
 
+0.0.15
+=====
+
+**Changed:**
+
+* Add thrid changed
+
+
 0.0.13
 =====
 
