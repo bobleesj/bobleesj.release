@@ -7,12 +7,16 @@ on:
       - '*'  # Trigger on all tags initially
 
 jobs:
-  check-release-privillege:
+  check-release-privilege:
     runs-on: ubuntu-latest
-    if: github.actor == 'sbillinge'
     steps:
       - name: Check user role
-        run: echo "User sbillinge is allowed to run this workflow."
+        run: |
+          if [ "${{ github.actor }}" != "sbillinge" ]; then
+            echo "Error: Unauthorized user"
+            exit 1
+          fi
+          echo "User sbillinge is allowed to run this workflow."
 
   tag-check:
     runs-on: ubuntu-latest
