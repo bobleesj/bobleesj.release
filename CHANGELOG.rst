@@ -4,6 +4,10 @@ Release Notes
 
 .. current developments
 
+0.0.43
+=====
+
+
 0.0.40
 =====
 
