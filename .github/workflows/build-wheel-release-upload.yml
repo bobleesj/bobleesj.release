@@ -13,7 +13,6 @@ jobs:
     uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
     with:
       project: bobleesj.release
-      c_extension: true
 
     secrets:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
