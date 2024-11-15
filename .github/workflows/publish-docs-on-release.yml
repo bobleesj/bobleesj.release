@@ -11,5 +11,5 @@ jobs:
       contents: write
     uses: bobleesj/release-scripts/.github/workflows/_publish-docs-on-release.yml@v0
     with:
-      project: bobleesj.release
+      project: diffpy.labpdfproc
       c_extension: false

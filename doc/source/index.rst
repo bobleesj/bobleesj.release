@@ -2,9 +2,9 @@
 |title|
 #######
 
-.. |title| replace:: bobleesj.release documentation
+.. |title| replace:: diffpy.labpdfproc documentation
 
-bobleesj.release - Python package for doing science..
+diffpy.labpdfproc - Tools for processing x-ray powder diffraction data from laboratory sources.
 
 | Software version |release|.
 | Last updated |today|.
@@ -13,17 +13,17 @@ bobleesj.release - Python package for doing science..
 Authors
 =======
 
-bobleesj.release is developed by Billinge Group
+diffpy.labpdfproc is developed by Billinge Group
 and its community contributors.
 
 For a detailed list of contributors see
-https://github.com/bobleesj-test-org/bobleesj.release/graphs/contributors.
+https://github.com/diffpy/diffpy.labpdfproc/graphs/contributors.
 
 ============
 Installation
 ============
 
-See the `README <https://github.com/bobleesj-test-org/bobleesj.release#installation>`_
+See the `README <https://github.com/diffpy/diffpy.labpdfproc#installation>`_
 file included with the distribution.
 
 =================
@@ -34,7 +34,7 @@ Table of contents
 
    license
    release
-   Package API <api/bobleesj.release>
+   Package API <api/diffpy.labpdfproc>
 
 =======
 Indices
