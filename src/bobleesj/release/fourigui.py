@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter.ttk import Button
 
-import h5py
 import matplotlib
 import numpy as np
 from matplotlib import pyplot as plt
@@ -253,79 +252,7 @@ class Gui(tk.Frame):
         frame11 = tk.Frame(self)
         frame11.place(x=WIDTH // 2, y=HEIGHT // 2)  # , height=HEIGHT//2, width=WIDTH//2)
 
-    def load_cube(self):
-        """
-        loads 3D array in h5py file format from the filename input panel
-        3D array is expected to be a reconstructed reciprocal scattering volume
-        when executed, one slide perpendicular to the selected axis will be plotted in the plot panel
-        """
-
-        filename = self.filename_entry.get()
-        f = h5py.File(filename, "r")
-        try:
-            if "data" in f.keys():
-                self.cube = np.array(f["data"])
-            elif "rebinned_data" in f.keys():
-                self.cube = np.array(f["rebinned_data"])
-        except Exception:
-            raise KeyError(
-                "- No data found in "
-                + filename
-                + " :( ..."
-                + "\nchange to alternative keys: "
-                + str(list(f.keys()))
-            )
-        print("- file loaded: {}".format(filename))
-
-        self.slider.destroy()
-        self.slider = tk.Scale(
-            self.frame01,
-            variable=self.plane_num,
-            from_=0,
-            to=len(self.cube) - 1,
-            label="slider",
-            orient=tk.HORIZONTAL,
-            length=WIDTH // 2,  # resolution=-1,
-            command=lambda x: self.multiple_funcs(self.plot_plane(), self.intensity_upd_local()),
-        )
-        self.slider.grid(row=0, column=0, padx=10, pady=10, sticky=tk.N + tk.E + tk.S + tk.W)
-
-        if not self.loaded:
-            fig, ax = plt.subplots(figsize=(4.95, 4.95))
-            fig = plt.gcf()
-            DPI = fig.get_dpi()
-            fig.set_size_inches(500 / float(DPI), 500 / float(DPI))
-            self.plane_num.set(np.shape(self.cube)[0] // 2)
-            if self.axis.get() == 0:
-                self.im = plt.imshow(self.cube[self.plane_num.get(), :, :])
-            elif self.axis.get() == 1:
-                self.im = plt.imshow(self.cube[:, self.plane_num.get(), :])
-            elif self.axis.get() == 2:
-                self.im = plt.imshow(self.cube[:, :, self.plane_num.get()])
-            else:
-                raise ValueError("axis must be 0,1,2")
-            plt.colorbar(shrink=0.81)
-            ax.set_xlabel("pixel")
-            ax.set_ylabel("pixel")
-            self.canvas = FigureCanvasTkAgg(fig, master=self.frame01_plotcell)
-            self.toolbar = NavigationToolbar2Tk(self.canvas, self.frame01_toolbar)
-            self.toolbar.pack(side=tk.LEFT)
-            # self.toolbar.children['!button6'].pack_forget()
-            # self.toolbar.children['!button7'].pack_forget()
-            self.toolbar.update()
-            self.canvas.draw()
-            self.canvas.get_tk_widget().pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
-            self.loaded = True
-        else:
-            self.plot_plane()
-            self.transformed = False
-            self.transcutted = False
-            self.cutted = False
-            self.cutoff.set(0)
-            self.space.set(0)
-
-        self.intensity_upd_global()
-
+  
     def plot_plane(self):
         """update plotted plane perpendicular to the selected axis"""
         if self.axis.get() == 0:
