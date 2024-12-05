@@ -39,7 +39,7 @@ Python package for doing science.
 
 * LONGER DESCRIPTION HERE
 
-For more information about the bobleesj.release library, please consult our `online documentation <https://bobleesj-test-org.github.io/bobleesj.release>`_.
+For more information about the bobleesj.release library, please consult our `online documentation <https://bobleesj-test-org.github.io/diffpy.labpdfproc>`_.
 
 Citation
 --------

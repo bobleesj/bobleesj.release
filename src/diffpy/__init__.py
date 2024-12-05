@@ -7,13 +7,13 @@
 # File coded by: Billinge Group members and community contributors.
 #
 # See GitHub contributions for a more detailed list of contributors.
-# https://github.com/bobleesj-test-org/bobleesj.release/graphs/contributors
+# https://github.com/diffpy/diffpy.labpdfproc/graphs/contributors
 #
 # See LICENSE.rst for license information.
 #
 ##############################################################################
 
-"""Blank namespace package for module bobleesj."""
+"""Blank namespace package for module diffpy."""
 
 
 from pkgutil import extend_path

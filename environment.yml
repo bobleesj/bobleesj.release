@@ -1,4 +1,4 @@
-name: bobleesj.release
+name: diffpy.labpdfproc
 channels:
   - conda-forge
 dependencies:
