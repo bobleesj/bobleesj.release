@@ -9,7 +9,7 @@ on:
 
 jobs:
   tests-on-pr:
-    uses: Billingegroup/release-scripts/.github/workflows/_tests-on-pr.yml@v0
+    uses: bobleesj/release-scripts/.github/workflows/_tests-on-pr.yml@v0
     with:
       project: diffpy.utils
       c_extension: false
