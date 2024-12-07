@@ -13,7 +13,7 @@ on:
 
 jobs:
   matrix-coverage:
-    uses: bobleesj/release-scripts/.github/workflows/_matrix-and-codecov-on-merge-to-main.yml@main
+    uses: bobleesj/release-scripts/.github/workflows/_matrix-and-codecov-on-merge-to-main.yml@reuse-matrix
     with:
       project: bobleesj
       c_extension: false
