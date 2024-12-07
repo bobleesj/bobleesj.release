@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - prereleased
+      - published
+  workflow_dispatch:
+
+jobs:
+  matrix-coverage:
+    uses: bobleesj/release-scripts/.github/workflows/_matrix-and-codecov-on-merge-to-main.yml@main
+    with:
+      project: bobleesj
+      c_extension: false
+      headless: false
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
