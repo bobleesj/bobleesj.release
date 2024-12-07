@@ -18,5 +18,6 @@ jobs:
       project: bobleesj
       c_extension: false
       headless: false
+      python_versions: "3.11, 3.12"
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
