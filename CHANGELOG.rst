@@ -4,6 +4,17 @@ Release Notes
 
 .. current developments
 
+0.1.7
+=====
+
+**Added:**
+
+* News has been added
+* no news added
+* no news
+* No news
+
+
 0.1.6
 =====
 
