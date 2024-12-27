@@ -13,6 +13,7 @@ jobs:
     uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@override-admin-tag
     with:
       project: diffpy.labpdfproc
+      github_admin_username: 'bobleesj'
 
     secrets:
       PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
