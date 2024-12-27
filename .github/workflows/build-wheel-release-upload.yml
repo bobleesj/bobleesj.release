@@ -10,7 +10,7 @@ jobs:
   release:
     permissions:
       contents: write
-    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@ignore-no-news
+    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@override-admin-tag
     with:
       project: diffpy.labpdfproc
 
