@@ -2,14 +2,14 @@ name: Deploy Documentation on Release
 
 on:
   release:
-    types: [published]
+    types: [created]
   workflow_dispatch:
 
 jobs:
   docs:
     permissions:
       contents: write
-    uses: bobleesj/release-scripts/.github/workflows/_publish-docs-on-release.yml@v0
+    uses: sbillinge/release-scripts/.github/workflows/_publish-docs-on-release.yml@v0
     with:
       project: diffpy.labpdfproc
       c_extension: false
