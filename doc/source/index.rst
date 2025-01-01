@@ -5,6 +5,7 @@
 .. |title| replace:: diffpy.labpdfproc documentation
 
 Let's release this 10:49 PM
+Let's do full release at 10:59 PM
 
 diffpy.labpdfproc - Tools for processing x-ray powder diffraction data from laboratory sources.
 
