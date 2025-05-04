@@ -10,7 +10,7 @@ jobs:
   release:
     permissions:
       contents: write
-    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@deploy-doc-within-release
+    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@tag-semen-version
     with:
       project: diffpy.labpdfproc
       github_admin_username: bobleesj
