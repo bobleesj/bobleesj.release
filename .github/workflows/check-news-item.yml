@@ -7,6 +7,6 @@ on:
 
 jobs:
   check-news-item:
-    uses: bobleesj/release-scripts/.github/workflows/_check-news-item.yml@news-file-warning
+    uses: Billingegroup/release-scripts/.github/workflows/_check-news-item.yml@v0
     with:
-      project: diffpy.utils
+      project: bobleesj.release

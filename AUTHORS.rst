@@ -1,10 +1,10 @@
 Authors
 =======
 
-Billinge Group and community contributors.
+Sangjoon Lee
 
 Contributors
 ------------
 
 For a list of contributors, visit
-https://github.com/bobleesj-test-org/bobleesj.release/graphs/contributors
+https://github.com/bobleesj-test-org/\/graphs/contributors

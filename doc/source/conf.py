@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# diffpy.labpdfproc documentation build configuration file, created by
+# bobleesj.release documentation build configuration file, created by
 # sphinx-quickstart on Thu Jan 30 15:49:41 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path("../..").resolve()))
 sys.path.insert(0, str(Path("../../src").resolve()))
 
 # abbreviations
-ab_authors = "Billinge Group members and community contributors"
+ab_authors = "Sangjoon Lee"
 
 # -- General configuration ------------------------------------------------
 
@@ -43,6 +43,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
+    "sphinx_copybutton",
     "m2r",
 ]
 
@@ -61,8 +62,8 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "diffpy.labpdfproc"
-copyright = "%Y, The Trustees of Columbia University in the City of New York"
+project = "bobleesj.release"
+copyright = "%Y, Sangjoon Lee"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -88,6 +89,11 @@ year = today.split()[-1]
 # substitute YEAR in the copyright string
 copyright = copyright.replace("%Y", year)
 
+# For sphinx_copybutton extension.
+# Do not copy "$" for shell commands in code-blocks.
+copybutton_prompt_text = r"^\$ "
+copybutton_prompt_is_regexp = True
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = ["build"]
@@ -111,7 +117,7 @@ exclude_patterns = ["build"]
 pygments_style = "sphinx"
 
 # A list of ignored prefixes for module index sorting.
-modindex_common_prefix = ["diffpy.labpdfproc"]
+modindex_common_prefix = ["bobleesj.release"]
 
 # Display all warnings for missing links.
 nitpicky = True
@@ -122,6 +128,14 @@ nitpicky = True
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+
+html_context = {
+    "display_github": True,
+    "github_user": "bobleesj-test-org",
+    "github_repo": "\",
+    "github_version": "main",
+    "conf_py_path": "/doc/source/",
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -202,7 +216,7 @@ html_theme_options = {
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-basename = "diffpy.labpdfproc".replace(" ", "").replace(".", "")
+basename = "bobleesj.release".replace(" ", "").replace(".", "")
 htmlhelp_basename = basename + "doc"
 
 
@@ -221,7 +235,13 @@ latex_elements = {
 # (source start file, target name, title,
 # author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ("index", "diffpy.labpdfproc.tex", "diffpy.labpdfproc Documentation", ab_authors, "manual"),
+    (
+        "index",
+        "bobleesj.release.tex",
+        "bobleesj.release Documentation",
+        ab_authors,
+        "manual",
+    ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -249,7 +269,15 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [("index", "diffpy.labpdfproc", "diffpy.labpdfproc Documentation", ab_authors, 1)]
+man_pages = [
+    (
+        "index",
+        "bobleesj.release",
+        "bobleesj.release Documentation",
+        ab_authors,
+        1,
+    )
+]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
@@ -263,10 +291,10 @@ man_pages = [("index", "diffpy.labpdfproc", "diffpy.labpdfproc Documentation", a
 texinfo_documents = [
     (
         "index",
-        "diffpy.labpdfproc",
-        "diffpy.labpdfproc Documentation",
+        "bobleesj.release",
+        "bobleesj.release Documentation",
         ab_authors,
-        "diffpy.labpdfproc",
+        "bobleesj.release",
         "One line description of project.",
         "Miscellaneous",
     ),

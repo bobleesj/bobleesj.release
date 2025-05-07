@@ -90,10 +90,3 @@ target/
 
 # Ipython Notebook
 .ipynb_checkpoints
-
-# version information
-setup.cfg
-/src/bobleesj-test-org/*/version.cfg
-
-# Rever
-rever/
