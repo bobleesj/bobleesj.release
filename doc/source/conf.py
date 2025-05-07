@@ -15,8 +15,16 @@
 
 import sys
 import time
-from importlib.metadata import version
+
 from pathlib import Path
+
+try:
+    from importlib.metadata import version
+    fullversion = version("bobleesj.release")
+except Exception:
+    fullversion = "unknown"
+
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -69,7 +77,6 @@ copyright = "%Y, Sangjoon Lee"
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 
-fullversion = version(project)
 # The short X.Y version.
 version = "".join(fullversion.split(".post")[:1])
 # The full version, including alpha/beta/rc tags.
