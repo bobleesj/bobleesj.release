@@ -132,7 +132,7 @@ html_theme = "sphinx_rtd_theme"
 html_context = {
     "display_github": True,
     "github_user": "bobleesj-test-org",
-    "github_repo": "\",
+    "github_repo": "bobleesj.release",
     "github_version": "main",
     "conf_py_path": "/doc/source/",
 }
