@@ -15,11 +15,10 @@
 
 import sys
 import time
-
 from pathlib import Path
+from importlib.metadata import version
 
 try:
-    from importlib.metadata import version
     fullversion = version("bobleesj.release")
 except Exception:
     fullversion = "unknown"
