@@ -7,33 +7,12 @@ on:
       - "*" # Trigger on all tags initially, but tag and release privilege are verified in _build-wheel-release-upload.yml
 
 jobs:
-  # release:
-  #   uses: scikit-package/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
-  #   with:
-  #     project: bobleesj.release
-  #     c_extension: false
-  #     maintainer_GITHUB_username: bobleesj
-  #   secrets:
-  #     PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-  #     PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-  update-changelog:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout the repository
-          uses: actions/checkout@v4
-          with:
-            ref: ${{ github.ref }}
-            token: ${{ secrets.PAT_TOKEN }}
-
-        - name: Update CHANGELOG.rst with the latest news
-          run: |
-            wget https://raw.githubusercontent.com/scikit-package/release-scripts/v0/.github/workflows/update-changelog.py
-            python update-changelog.py "${{ github.ref_name }}"
-            rm update-changelog.py
-
-        - name: Commit the changes in CHANGELOG.rst
-          uses: stefanzweifel/git-auto-commit-action@v5
-          with:
-            commit_message: update changelog
-            branch: main
-
+  release:
+    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@v0
+    with:
+      project: bobleesj.release
+      c_extension: false
+      maintainer_GITHUB_username: bobleesj
+    secrets:
+      PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
