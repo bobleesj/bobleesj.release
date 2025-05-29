@@ -51,6 +51,8 @@ If you use bobleesj.release in a scientific publication, we would like you to ci
 Installation
 ------------
 
+Test codecov!
+
 The preferred method is to use `Miniconda Python
 <https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html>`_
 and install from the "conda-forge" channel of Conda packages.
