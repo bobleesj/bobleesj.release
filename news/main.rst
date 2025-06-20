@@ -1,12 +1,13 @@
 **Added:**
 
+* Test
 * Test 4
 * Test 3
 * Test 2
 
 **Changed:**
 
-* <news item>
+* No news added: Test
 
 **Deprecated:**
 
