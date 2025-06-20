@@ -1,5 +1,6 @@
 **Added:**
 
+* Test 4
 * Test 3
 * Test 2
 
