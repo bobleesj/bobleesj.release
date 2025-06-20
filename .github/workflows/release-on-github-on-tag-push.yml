@@ -8,7 +8,7 @@ on:
 
 jobs:
   release:
-    uses: bobleesj/release-scripts/.github/workflows/_build-wheel-release-upload.yml@gh-release-workflow
+    uses: bobleesj/release-scripts/.github/workflows/_release-on-github-on-tag-push.yml@gh-release-workflow
     with:
       maintainer_GITHUB_username: bobleesj
     secrets:
