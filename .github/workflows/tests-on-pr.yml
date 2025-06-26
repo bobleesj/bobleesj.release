@@ -6,10 +6,13 @@ on:
 
 jobs:
   tests-on-pr:
-    uses: scikit-package/release-scripts/.github/workflows/_tests-on-pr.yml@v0
+    uses: bobleesj/release-scripts/.github/workflows/_tests-on-pr.yml@run-command
     with:
       project: bobleesj.release
       c_extension: false
       headless: false
+      run: |
+        pip install cifkit
+        echo "Done"
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
